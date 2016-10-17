@@ -8,7 +8,8 @@ if (mysqli_connect_errno())
   }
 if($_GET)
 {
-    $query="SELECT * FROM daily_hifz_report WHERE its_student = '".addslashes($_GET['itsid'])."' limit 5";
+    $student_itsid = $_GET['itsid'];
+    $query="SELECT * FROM (SELECT * FROM daily_hifz_report WHERE its_student = '".addslashes($_GET['itsid'])."' ORDER BY id DESC limit 5) sub ORDER BY id ASC;";
     $result = mysqli_query($link,$query);
 
 
@@ -31,15 +32,15 @@ if($_GET)
       </div>
       <div class="modal-body">
         <div id="hisabform">
-        <select name="salary">
-                            <option value='Cash'>Murajeat</option>
-                            <option value='Zabihat'>Jadeed</option>
-                            <option value='BB Salary'>Juzhali</option>
-                            <option value='SF Salary'>Tasmee</option>
+        <select name="hifztype">
+                            <option value='Murajeat'>Murajeat</option>
+                            <option value='Jadeed'>Jadeed</option>
+                            <option value='Juzhali'>Juzhali</option>
+                            <option value='Tasmee'>Tasmee</option>
         </select>  
         <input type="number" name="Amount" placeholder="Marks"/>
-        <input type="hidden" name="Month"/>
-        <input type="text" class="gregdate" name="sf_amount_date" value="<?php echo date("Y-m-d") ?>"/>
+        <input type="text" name="sf_amount_date" value="<?php echo date("Y-m-d") ?>"/>
+        <input type="hidden" name="studentits"/>
       </div>
       </div>
       <div class="modal-footer">
@@ -67,6 +68,8 @@ if($_GET)
 
                   <tr>
                     <th>Date</th>
+                    <th>Teacher ITS</th>
+                    <th>Student ITS</th>
                     <th>Murajeat</th>
                     <th>Murajeat Marks</th>
                     <th>Jadeed</th>
@@ -86,6 +89,8 @@ if($_GET)
                   ?>
                   <tr>
                     <td><?php echo $values['date']; ?></td>
+                    <td><?php echo $values['its_teacher']; ?></td>
+                    <td><?php echo $values['its_student']; ?></td>
                     <td><?php echo $values['murajeat']; ?></td>
                     <td><?php echo $values['murajeat_marks']; ?></td>
                     <td><?php echo $values['jadeed']; ?></td>
@@ -98,7 +103,7 @@ if($_GET)
                   <?php } ?>
                   <tr>
                       <td colspan='9'></td>
-                      <td><a href="#" data-key="payhisab"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
+                      <td><a href="#" data-key="payhisab" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
                   </tr>
                 </tbody>
               </table>
@@ -112,7 +117,7 @@ $(function(){
       var hisabform = $('#myModal');
       hisabform.hide();
       $('[data-key="payhisab"]').click(function() {
-        $('[name="Month"]', hisabform).val($(this).attr('data-month'));
+        $('[name="studentits"]', hisabform).val($(this).attr('data-its'));
         hisabform.show();
       });
       $('[name="save"]').click(function() {
@@ -122,18 +127,19 @@ $(function(){
         });
         $.ajax({
           method: 'post',
-          url: '_payhisab.php',
+          url: '_addData.php',
           async: 'false',
           data: data,
           success: function(data) {
             if(data == 'success') {
+              alert('Data sucessfully updated.');
               hisabform.hide();
-              window.location.href = window.location.href; //reload
+              location.reload();
             // } else if(data == 'DuplicateReceiptNo') {
             //   alert('Receipt number already exists in database');
             }
             else {
-              alert('Update failed. Please do not add receipt again unless you check system values properly');
+              alert('Update failed. Refresh the page and try again.');
             }
           },
           error: function() {
