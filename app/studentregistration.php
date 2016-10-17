@@ -16,6 +16,7 @@ if($_POST)
   extract($data);
     $sql = "INSERT INTO students(
                                         `ITS`,
+                                        `password`,
                                         `Fullname`,
                                         `Farigyear`,
                                         `HifzSipara`,
@@ -29,6 +30,7 @@ if($_POST)
                                         )
                             VALUES (
                                     '$itsid',
+                                    '$password',
                                     '$fullname',
                                     '$farigyear',
                                     '$hifzdonetill',
@@ -58,7 +60,7 @@ if($_POST)
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Hifz Program</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <style>
       .header {
@@ -90,7 +92,13 @@ if($_POST)
           <input type="number" class="form-control" name="itsid" >
         </div>
       </div>
-      <div class="col-md-8 col-sm-12">
+       <div class="col-md-4 col-sm-12">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" >
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="fullname">Name</label>
           <input type="text" class="form-control" name="fullname" >

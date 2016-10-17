@@ -16,6 +16,7 @@ if($_POST)
   extract($data);
     $sql = "INSERT INTO teachers(
                                         `ITS`,
+                                        `password`,
                                         `Full_Name`,
                                         `Time`,
                                         `Residence`,
@@ -26,6 +27,7 @@ if($_POST)
                                         )
                             VALUES (
                                     '$itsid',
+                                    '$password',
                                     '$fullname',
                                     '$hifztime',
                                     '$residence',
@@ -59,6 +61,9 @@ if($_POST)
 	ITS ID:<br>
     <input type="text" name="itsid" value="">
     <br>
+  Password:<br>
+    <input type="password" name="password" value="">
+    <br>
 	Place of Residence:<br>
     <input type="text" name="residence" value="">
     <br>
@@ -72,7 +77,7 @@ if($_POST)
     <input type="text" name="mobile" value="">
     <br>
 	Email ID:<br>
-    <input type="text" name="email" value="">
+    <input type="email" name="email" value="">
 	<br><br>
     <input type="submit" value="Submit">
   </fieldset>

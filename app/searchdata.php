@@ -19,7 +19,7 @@ if($_GET)
 <html>
 <head>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
  
 </head>
 <body>
@@ -57,6 +57,7 @@ if($_GET)
     </div>
   </div>
 </div>
+    <br><a href="logout.php">Logout</a><br>
 
 <form>
   <fieldset>
