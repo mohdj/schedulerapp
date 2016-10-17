@@ -32,14 +32,21 @@ if($_GET)
       </div>
       <div class="modal-body">
         <div id="hisabform">
-        <select name="hifztype">
-                            <option value='Murajeat'>Murajeat</option>
-                            <option value='Jadeed'>Jadeed</option>
-                            <option value='Juzhali'>Juzhali</option>
-                            <option value='Tasmee'>Tasmee</option>
-        </select>  
-        <input type="number" name="Amount" placeholder="Marks"/>
-        <input type="text" name="sf_amount_date" value="<?php echo date("Y-m-d") ?>"/>
+        <input type="date" name="sf_amount_date" value="<?php echo date("Y-m-d") ?>"/>
+        <input type="number" name="mr_juz1" placeholder="Murajeat Juz1"/> 
+        <input type="number" name="mr_marks1" placeholder="Murajeat Marks1"/>
+        <input type="number" name="mr_juz2" placeholder="Murajeat Juz2"/> 
+        <input type="number" name="mr_marks2" placeholder="Murajeat Marks2"/>
+        <input type="number" name="mr_juz3" placeholder="Murajeat Juz3"/> 
+        <input type="number" name="mr_marks3" placeholder="Murajeat Marks3"/>
+
+        <input type="number" name="jh_from" placeholder="Juzhali From Page"/> 
+        <input type="number" name="jh_to" placeholder="Juzhali To Page"/>
+        <input type="number" name="jh_marks" placeholder="Juzhali Marks"/>
+
+        <input type="text" name="jd_surat" placeholder="Jadeed Surat"/>
+        <input type="number" name="jd_to" placeholder="Jadeed To Ayaat"/>
+        <input type="number" name="jd_marks" placeholder="Jadeed Marks"/>
         <input type="hidden" name="studentits"/>
       </div>
       </div>
@@ -62,7 +69,7 @@ if($_GET)
 </form>
 
 
-<table>
+<table border="1">
 
                 <thead>
 
@@ -70,13 +77,19 @@ if($_GET)
                     <th>Date</th>
                     <th>Teacher ITS</th>
                     <th>Student ITS</th>
-                    <th>Murajeat</th>
-                    <th>Murajeat Marks</th>
-                    <th>Jadeed</th>
+                    <th>Murajeat Juz 1</th>
+                    <th>Murajeat Juz 1 Marks</th>
+                    <th>Murajeat Juz 2</th>
+                    <th>Murajeat Juz 2 Marks</th>
+                    <th>Murajeat Juz 3</th>
+                    <th>Murajeat Juz 3 Marks</th>
+                    <th>Jadeed Surat</th>
+                    <th>Jadeed To Ayaat</th>
                     <th>Jadeed Marks</th>
                     <th>Tasmee</th>
                     <th>Tasmee Marks</th>
-                    <th>Juzhali</th>
+                    <th>Juzhali From Page</th>
+                    <th>Juzhali To Page</th>
                     <th>Juzhali Marks</th>
                     <th>Action</th>
                   </tr>
@@ -91,18 +104,24 @@ if($_GET)
                     <td><?php echo $values['date']; ?></td>
                     <td><?php echo $values['its_teacher']; ?></td>
                     <td><?php echo $values['its_student']; ?></td>
-                    <td><?php echo $values['murajeat']; ?></td>
-                    <td><?php echo $values['murajeat_marks']; ?></td>
-                    <td><?php echo $values['jadeed']; ?></td>
+                    <td><?php echo $values['murajeat_juz1']; ?></td>
+                    <td><?php echo $values['murajeat_marks1']; ?></td>
+                    <td><?php echo $values['murajeat_juz2']; ?></td>
+                    <td><?php echo $values['murajeat_marks2']; ?></td>
+                    <td><?php echo $values['murajeat_juz3']; ?></td>
+                    <td><?php echo $values['murajeat_marks3']; ?></td>
+                    <td><?php echo $values['jadeed_surat']; ?></td>
+                    <td><?php echo $values['jadeed_to_ayat']; ?></td>
                     <td><?php echo $values['jadeed_marks']; ?></td>
                     <td><?php echo $values['tasmee']; ?></td>
                     <td><?php echo $values['tasmee_marks']; ?></td>
-                    <td><?php echo $values['juzhali']; ?></td>
-                    <td><?php echo $values['juzhali']; ?></td>
+                    <td><?php echo $values['juzhali_from']; ?></td>
+                    <td><?php echo $values['juzhali_to']; ?></td>
+                    <td><?php echo $values['juzhali_marks']; ?></td>
                   </tr>
                   <?php } ?>
                   <tr>
-                      <td colspan='9'></td>
+                      <td colspan='17'></td>
                       <td><a href="#" data-key="payhisab" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
                   </tr>
                 </tbody>
