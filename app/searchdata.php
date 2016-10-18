@@ -59,6 +59,7 @@ if($_GET)
         <input type="number" name="jd_to" placeholder="Jadeed To Ayaat"/>
         <input type="number" name="jd_marks" placeholder="Jadeed Marks"/>
         <input type="hidden" name="studentits"/>
+        <input type="hidden" name="teacherits"/>
       </div>
       </div>
       <div class="modal-footer">
@@ -152,14 +153,14 @@ if (!empty($values['Fullname']))
                       ?>
                   <tr>
                       <td colspan='17'></td>
-                      <td><a href="#" data-key="payhisab" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
+                      <td><a href="#" data-key="payhisab" data-teacher-its="<?php echo $_SESSION['login_teacher']; ?>" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
                   </tr>
                   <?php } ?>
                 </tbody>
               </table></p>
 <?php } ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 <script>
 $(function(){
@@ -168,6 +169,7 @@ $(function(){
       hisabform.hide();
       $('[data-key="payhisab"]').click(function() {
         $('[name="studentits"]', hisabform).val($(this).attr('data-its'));
+        $('[name="teacherits"]', hisabform).val($(this).attr('data-teacher-its'));
         hisabform.show();
       });
       $('[name="save"]').click(function() {
