@@ -118,7 +118,12 @@ if (!empty($values['Fullname']))
                     <th>Juzhali From Page</th>
                     <th>Juzhali To Page</th>
                     <th>Juzhali Marks</th>
+                    <?php
+                     if (!empty($_SESSION['login_teacher']))
+                      {
+                      ?>
                     <th>Action</th>
+                    <?php } ?>
                   </tr>
                 </thead>
 
