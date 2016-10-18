@@ -18,9 +18,8 @@ $count1=mysqli_num_rows($result1);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1)
 {
-$_SESSION['login_user']=$myusername;
-
-header("location: searchdata.php");
+    $_SESSION['login_user']=$myusername;
+    header("location: searchdata.php?itsid=$myusername");
 }
 elseif ($count1 == 1) {
     $_SESSION['login_teacher']=$myusername;
@@ -49,7 +48,7 @@ echo "Your Login Name or Password is invalid";
     <br><br>
     <input type="password" name="password" value="" placeholder="Password">
     <br><br>
-    <input type="submit" value="Search">
+    <input type="submit" value="Login">
   </fieldset>
 </form>
 </body>

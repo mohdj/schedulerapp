@@ -1,6 +1,15 @@
 <?php
+session_start();
 include('connection.php');
 error_reporting(0);
+
+if (!is_null($_SESSION['login_user'])  || !is_null($_SESSION['login_teacher'])) {
+ 
+}
+else {
+  header("Location: login.php");
+  exit; 
+}
 
 if (mysqli_connect_errno())
   {
@@ -12,6 +21,8 @@ if($_GET)
     $query="SELECT * FROM (SELECT * FROM daily_hifz_report WHERE its_student = '".addslashes($_GET['itsid'])."' ORDER BY id DESC limit 5) sub ORDER BY id ASC;";
     $result = mysqli_query($link,$query);
 
+    $query1="SELECT * FROM students where ITS = '".addslashes($_GET['itsid'])."' ";
+    $values = mysqli_fetch_assoc(mysqli_query($link,$query1));
 
 }
 ?>
@@ -59,6 +70,11 @@ if($_GET)
 </div>
     <br><a href="logout.php">Logout</a><br>
 
+<?php
+if (!empty($_SESSION['login_teacher']))
+{
+?>
+
 <form>
   <fieldset>
     <legend>Search Data</legend>
@@ -69,8 +85,17 @@ if($_GET)
   </fieldset>
 </form>
 
+<?php
+}
 
-<table border="1">
+if (!empty($values['Fullname']))
+{
+?>
+<br>
+<h4>Student Name</h4>
+<p><strong><?php echo $values['Fullname']; ?></strong></p>
+
+<p><table border="1">
 
                 <thead>
 
@@ -120,14 +145,19 @@ if($_GET)
                     <td><?php echo $values['juzhali_to']; ?></td>
                     <td><?php echo $values['juzhali_marks']; ?></td>
                   </tr>
-                  <?php } ?>
+                  <?php
+                     } 
+                     if (!empty($_SESSION['login_teacher']))
+                      {
+                      ?>
                   <tr>
                       <td colspan='17'></td>
                       <td><a href="#" data-key="payhisab" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
                   </tr>
+                  <?php } ?>
                 </tbody>
-              </table>
-
+              </table></p>
+<?php } ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
