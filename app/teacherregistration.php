@@ -88,8 +88,8 @@ if($_POST)
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="itsid">Password</label>
-          <input type="number" class="form-control" name="password" >
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" >
         </div>
       </div>
       <div class="col-md-8 col-sm-12">
@@ -104,7 +104,7 @@ if($_POST)
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="mobile">Mobile No.</label>
-          <input type="text" class="form-control" name="mobile" >
+          <input type="number" class="form-control" name="mobile" >
         </div>
       </div>
       <div class="col-md-8 col-sm-12">
@@ -118,26 +118,26 @@ if($_POST)
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="form-group">
-          <label for="email">Place of Residence</label>
+          <label for="residence">Place of Residence</label>
           <input type="text" class="form-control" name="residence" >
         </div>
       </div>
 
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="email">Jamea Farig Year</label>
-          <input type="text" class="form-control" name="farigyear" >
+          <label for="farigyear">Jamea Farig Year</label>
+          <input type="number" class="form-control" name="farigyear" >
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="skype">Hafiz Year</label>
-          <input type="text" class="form-control" name="hafizyear" >
+          <label for="hafizyear">Hafiz Year</label>
+          <input type="number" class="form-control" name="hafizyear" >
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="mobile">Hifz Khidmat Time</label>
+          <label for="hifztime">Hifz Khidmat Time</label>
           <input type="text" class="form-control" name="hifztime" >
         </div>
       </div>
