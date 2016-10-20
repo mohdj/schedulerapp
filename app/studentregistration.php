@@ -70,94 +70,139 @@ if($_POST)
   </div>
 
   <form class="container-fluid" method="post">
+    <div class="panel panel-default"><div class="panel-heading">Account Details</div>
+      <div class="panel-body">
+      	<p>
+          Provide your account details. Make sure to remember or note down your password for future reference. Provide your fullname, including first last and middle name.
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label>ITS ID</label>
+              <input type="number" class="form-control" name="itsid" pattern="\d{8}" required="true" title="Please enter correct ITS ID">
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-12">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" name="fullname" required="true">
+            </div>
+          </div>
 
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="itsid">ITS ID</label>
-          <input type="text" class="form-control" name="itsid" pattern="\d{8}" required="true" title="Please enter correct ITS ID">
+           <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label>Create Password</label>
+              <input type="password" class="form-control" name="password" required="true">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input type="password" class="form-control" name="password" required="true">
+            </div>
+          </div>
         </div>
       </div>
-       <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="password">Create Password</label>
-          <input type="password" class="form-control" name="password" required="true">
+    </div>
+
+
+
+    <div class="panel panel-default"><div class="panel-heading">Contact Details</div>
+      <div class="panel-body">
+        <p>
+          Provide your contact details. Skype and/or Gmail (hangout) will be used for conducting live session with your teacher. Your mobile No should be whatsapp no. All important communication will be sent to provided mobile no and email address.
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="email">Email address (Gmail if possible)</label>
+              <input type="email" class="form-control" name="email" required="true">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="skype">Skype Id</label>
+              <input type="text" class="form-control" name="skype" required="true">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="mobile">Mobile No.</label>
+              <input type="text" class="form-control" name="mobile" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{10,14}">
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="email">Place of Residence</label>
+              <textarea type="text" class="form-control" name="residence" required="true"></textarea>
+            </div>
+          </div>
         </div>
+
       </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="fullname">Name</label>
-          <input type="text" class="form-control" name="fullname" required="true">
+    </div>
+
+
+    <div class="panel panel-default"><div class="panel-heading">Misc Details</div>
+      <div class="panel-body">
+        <p>
+          Your Jamig Farig year in Hijri and any khidmat that you are currently performing. Also specify the Juz No uptill which you have completed hifz. 
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="email">Jamea Farig Year (Hijri)</label>
+              <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="skype">Khidmat (if any?)</label>
+              <input type="text" class="form-control" name="khidmat">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="mobile">Hifz Done Till</label>
+              <input type="number" class="form-control" name="hifzdonetill" value="0" max="30" required="true">
+            </div>
+          </div>
         </div>
+
+      </div>
+    </div>
+
+
+    <div class="panel panel-default"><div class="panel-heading">Khidmat Timing</div>
+      <div class="panel-body">
+        <p>
+          On which days and time of the week will you be availale to perform khidmat. 
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="itsid">Hifz Class Time</label>
+              <input type="text" class="form-control" name="hifztime" placeholder="e.g. 09:00-09:30,18:00-18:30">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="form-group">
+              <label for="fullname">Hifz Days</label>
+              <input type="text" class="form-control" name="hifzdays" placeholder="e.g. Wed,Thu">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="email">Email address (Gmail if possible)</label>
-          <input type="email" class="form-control" name="email" required="true">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="skype">Skype Id</label>
-          <input type="text" class="form-control" name="skype" required="true">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="mobile">Mobile No.</label>
-          <input type="text" class="form-control" name="mobile" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{10,14}">
-        </div>
+        <input class="btn btn-success btn-block" type="submit" value="Submit">
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="email">Place of Residence</label>
-          <input type="text" class="form-control" name="residence" required="true">
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="email">Jamea Farig Year</label>
-          <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="skype">Khidmat (if any?)</label>
-          <input type="text" class="form-control" name="khidmat">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="mobile">Hifz Done Till</label>
-          <input type="number" class="form-control" name="hifzdonetill" value='0' max="30">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-          <label for="itsid">Hifz Class Time</label>
-          <input type="text" class="form-control" name="hifztime" placeholder="e.g. 18-18:30">
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="form-group">
-          <label for="fullname">Hifz Days</label>
-          <input type="text" class="form-control" name="hifzdays" placeholder="e.g. wed,thurs">
-        </div>
-      </div>
-
-    </div>
-
-    <input class="btn btn-success" type="submit" value="Submit">
+    
   </form>
 
   <div class="footer">
