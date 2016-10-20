@@ -61,21 +61,7 @@ if($_POST)
     <title>Hifz Program</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-    <style>
-      .header {
-        min-height: 50px;
-        background: #FFEAC3;
-        text-transform: uppercase;
-        text-align: center;
-        border-bottom: 2px solid #704d0e;
-        margin-bottom: 20px
-      }
-      .header h3 {
-        margin: auto;
-        line-height: 60px;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/index.css">
   </head>
 <body>
 
@@ -174,6 +160,9 @@ if($_POST)
     <input class="btn btn-success" type="submit" value="Submit">
   </form>
 
+  <div class="footer">
+    <span>Copyright &copy; 2015-2016 Muntasebaat Hifz. All rights reserved.</span>
+  </div>
 </body>
 </html>
 
