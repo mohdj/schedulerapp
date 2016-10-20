@@ -1,0 +1,31 @@
+.header {
+  min-height: 50px;
+  background: #3EC9C3;
+  text-transform: uppercase;
+  border-bottom: 2px solid #429a96;
+  margin-bottom: 20px;
+}
+.header h3 {
+  margin: auto;
+  line-height: 60px;
+  font-family: 'Pacifico', cursive;
+  display: inline-block;
+}
+.header a {
+  vertical-align: middle;
+  /* display: block; */
+  line-height: 60px;
+  padding: 0px 20px;
+  /* padding-top: 40px; */
+  float: right;
+}
+
+.footer {
+  background: #3EC9C3;
+  border-top: 2px solid #429a96;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer span {
+  line-height: 40px;
+}
