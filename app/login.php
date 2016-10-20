@@ -48,20 +48,65 @@ echo "Your Login Name or Password is invalid";
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
  
+    <style>
+        body {
+            background: #FFEAC3;
+            padding-top: 5%;
+            background-image: url("../images/pattern.jpg");
+            background-repeat: repeat;
+        }
+        .login-box {
+            padding: 10px 10px;
+            border: 1px solid #444;
+            background: #FFEAC3;
+            border-radius: 4px 4px;
+        }
+        h2 {
+            font-family: 'Pacifico', cursive;
+        }
+    </style>
 </head>
 <body>
-    <form method="POST">
-  <fieldset>
-    <legend>Login</legend>
-    <br>
-    <input type="text" name="username" value="" placeholder="ItsId">
-    <br><br>
-    <input type="password" name="password" value="" placeholder="Password">
-    <br><br>
-    <input type="submit" value="Login">
-  </fieldset>
-</form>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="text-center"><h2>Muntasebaat Hifz Program</h2></div>
+            </div>
+            <div class="col-md-12"><br><br></div>
+
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-box">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="username">ITS ID:</label>
+                            <input name="username" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input name="password" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success btn-block" value="Login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12"><br></div>
+            <div class="col-md-4 col-md-offset-4">
+                <div class="text-center"><em>Copyright &copy; 2016 Muntasebaat Hifz. All rights reserved.</em></div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
