@@ -1,6 +1,18 @@
 <?php
 include("connection.php");
+error_reporting(0);
 session_start();
+
+if (!is_null($_SESSION['login_user'])) {
+    $temp = $_SESSION['login_user'];
+    header("Location: searchdata.php?itsid=$temp");
+}
+
+if (!is_null($_SESSION['login_teacher'])) {
+    header("Location: searchdata.php");
+}
+
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 // username and password sent from Form

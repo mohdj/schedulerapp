@@ -43,7 +43,7 @@ if($_GET)
 <div class="container-fluid">
   <div class="header row">
     <div class="col-md-8">
-      <h3>Muntasebaat Hifz</h3>
+      <h3><a href="/">Muntasebaat Hifz</a></h3>
     </div>
     <div class="col-md-2 col-md-offset-2">
       <a href="logout.php">Logout</a>
