@@ -111,10 +111,6 @@ if (!empty($_SESSION['login_teacher'])) {
     </form>
   </div>
 </div>
-<?php 
-} ?>
-
-
 <?php
 }
 if (!empty($values['Fullname']))
