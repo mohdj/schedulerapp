@@ -174,10 +174,10 @@ if($_POST)
     </div>
 
 
-    <div class="panel panel-default"><div class="panel-heading">Khidmat Timing</div>
+    <div class="panel panel-default"><div class="panel-heading">Class Timing</div>
       <div class="panel-body">
         <p>
-          On which days and time of the week will you be availale to perform khidmat. 
+          On which days and time of the week will you be comfortable for attending classes. Please note you would require active internet connection during this time to attend live session.
         </p>
         <div class="row">
           <div class="col-md-4 col-sm-12">
