@@ -94,16 +94,16 @@ if (!empty($_SESSION['login_teacher'])) {
 ?>
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">Search Data</h3>
+    <h3 class="panel-title">Search Hifz Reports</h3>
   </div>
 
   <div class="panel-body">
     <p>
-      Here you can search for student reports. Specify students Its Id to search!
+      Enter Student's ITS ID to view / submit new hifz reports.
     </p>
     <form class="form-horizontal">
       <div class="col-md-8 form-group">
-        <input type="number" class="form-control" name="itsid" placeholder="Specify student Its Id?"/>
+        <input type="number" class="form-control" name="itsid" placeholder="Student's ITS ID"/>
       </div>
       <div class="col-md-2 col-md-offset-2">
         <input class="btn btn-success btn-block" type="submit" value="Search"/>
@@ -116,9 +116,8 @@ if (!empty($_SESSION['login_teacher'])) {
 if (!empty($values['Fullname']))
 {
 ?>
-<div class="page-header"><h3>Student Hifz Reports</h3></div>
+<div class="page-header"><h3>Hifz Reports</h3></div>
 <h4><?php echo $values['Fullname']; ?></h4>
-<p>Following is the last five days reports submitted:</p>
 
 <table class="table table-bordered table-hover">
   <thead>
