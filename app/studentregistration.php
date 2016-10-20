@@ -66,7 +66,7 @@ if($_POST)
 <body>
 
   <div class="header">
-    <h3>Muntasebaat Hifz Registration</h3>
+    <h3><a href="/">Muntasebaat Hifz Registration</a></h3>
   </div>
 
   <form class="container-fluid" method="post">
