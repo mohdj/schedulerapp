@@ -117,15 +117,20 @@ if (!empty($values['Fullname']))
 {
 ?>
 <div class="page-header"><h3>Student Hifz Reports</h3></div>
-<h4>Student: <?php echo $values['Fullname']; ?></h4>
+<h4><?php echo $values['Fullname']; ?></h4>
 <p>Following is the last five days reports submitted:</p>
 
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th rowspan="2">Date</th>
+      <?php
+       if (!empty($_SESSION['login_teacher']))
+        {
+      ?>
       <th rowspan="2">Teacher ITS</th>
       <th rowspan="2">Student ITS</th>
+      <?php } ?>
       <th colspan="2">Murajeat 1</th>
       <th colspan="2">Murajeat 2</th>
       <th colspan="2">Murajeat 3</th>
@@ -164,8 +169,13 @@ if (!empty($values['Fullname']))
     ?>
     <tr>
       <td><?php echo $values['date']; ?></td>
+      <?php
+       if (!empty($_SESSION['login_teacher']))
+        {
+        ?>
       <td><?php echo $values['its_teacher']; ?></td>
       <td><?php echo $values['its_student']; ?></td>
+      <?php } ?>
       <td><?php echo $values['murajeat_juz1']; ?></td>
       <td><?php echo $values['murajeat_marks1']; ?></td>
       <td><?php echo $values['murajeat_juz2']; ?></td>
@@ -180,6 +190,12 @@ if (!empty($values['Fullname']))
       <td><?php echo $values['juzhali_from']; ?></td>
       <td><?php echo $values['juzhali_to']; ?></td>
       <td><?php echo $values['juzhali_marks']; ?></td>
+      <?php
+       if (!empty($_SESSION['login_teacher']))
+        {
+        ?>
+      <td></td>
+      <?php } ?>
     </tr>
     <?php
        } 
