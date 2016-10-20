@@ -74,20 +74,20 @@ if($_POST)
     <div class="row">
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="itsid">Its Id</label>
-          <input type="number" class="form-control" name="itsid" >
+          <label for="itsid">ITS ID</label>
+          <input type="text" class="form-control" name="itsid" pattern="\d{8}" required="true" title="Please enter correct ITS ID">
         </div>
       </div>
        <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" name="password" >
+          <label for="password">Create Password</label>
+          <input type="password" class="form-control" name="password" required="true">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="fullname">Name</label>
-          <input type="text" class="form-control" name="fullname" >
+          <input type="text" class="form-control" name="fullname" required="true">
         </div>
       </div>
     </div>
@@ -95,20 +95,20 @@ if($_POST)
     <div class="row">
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" name="email" >
+          <label for="email">Email address (Gmail if possible)</label>
+          <input type="email" class="form-control" name="email" required="true">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="skype">Skype Id</label>
-          <input type="text" class="form-control" name="skype" >
+          <input type="text" class="form-control" name="skype" required="true">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="mobile">Mobile No.</label>
-          <input type="text" class="form-control" name="mobile" >
+          <input type="text" class="form-control" name="mobile" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{10,14}">
         </div>
       </div>
     </div>
@@ -117,26 +117,26 @@ if($_POST)
       <div class="col-md-12">
         <div class="form-group">
           <label for="email">Place of Residence</label>
-          <input type="text" class="form-control" name="residence" >
+          <input type="text" class="form-control" name="residence" required="true">
         </div>
       </div>
 
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="email">Jamea Farig Year</label>
-          <input type="text" class="form-control" name="farigyear" >
+          <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="skype">Khidmat (if any?)</label>
-          <input type="text" class="form-control" name="khidmat" >
+          <input type="text" class="form-control" name="khidmat">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="mobile">Hifz Done Till</label>
-          <input type="text" class="form-control" name="hifzdonetill" >
+          <input type="number" class="form-control" name="hifzdonetill" value='0' max="30">
         </div>
       </div>
     </div>
@@ -145,13 +145,13 @@ if($_POST)
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="itsid">Hifz Class Time</label>
-          <input type="text" class="form-control" name="hifztime" >
+          <input type="text" class="form-control" name="hifztime" placeholder="e.g. 18-18:30">
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="form-group">
           <label for="fullname">Hifz Days</label>
-          <input type="text" class="form-control" name="hifzdays" >
+          <input type="text" class="form-control" name="hifzdays" placeholder="e.g. wed,thurs">
         </div>
       </div>
 
