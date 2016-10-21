@@ -69,7 +69,7 @@ if($_POST)
   </head>
 <body>
 
-  <div class="header" align="center">
+  <div class="header">
     <h3><a href="/">Muntasebaat Hifz Registration</a></h3>
   </div>
 
