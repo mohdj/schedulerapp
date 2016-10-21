@@ -7,6 +7,7 @@ if (mysqli_connect_errno())
   }
 if($_POST)
 {
+  $_POST['hifzdays'] = implode(', ', $_POST['hifzdays']);
   $raw_data = $_POST;
   function sanitize($v)
   {
@@ -14,6 +15,7 @@ if($_POST)
   }
   $data = array_map("sanitize",$raw_data);
   extract($data);
+
     $sql = "INSERT INTO students(
                                         `ITS`,
                                         `password`,
@@ -148,13 +150,13 @@ if($_POST)
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
               <label for="farigyear">Jamea Farig Year (Hijri)</label>
-              <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
+              <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year" required="true">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
               <label for="khidmat">Khidmat (if any?)</label>
-              <input type="text" class="form-control" name="khidmat">
+              <input type="text" class="form-control" name="khidmat" required="true">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
@@ -177,7 +179,6 @@ if($_POST)
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -190,18 +191,23 @@ if($_POST)
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="hifztime">Hifz Class Time</label>
-              <input type="text" class="form-control" name="hifztime" placeholder="e.g. 09:00-09:30,18:00-18:30">
+              <label for="hifztime">Hifz Class Time (e.g 09:00-09:15)</label>
+              <input type="text" class="form-control" name="hifztime" placeholder="e.g. 09:00-09:15,18:00-18:15" pattern="\d\d:\d\d-\d\d:\d\d" required="true">
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="form-group">
-              <label for="hifzdays">Hifz Days</label>
-              <input type="text" class="form-control" name="hifzdays" placeholder="e.g. Wed,Thu">
+              <label for="hifzdays">Hifz Days (Select minimum 3 days)</label>
+              <select class="form-control" multiple="multiple" name="hifzdays[]" required="true">
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+              </select>
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -216,6 +222,7 @@ if($_POST)
   <div class="footer">
     <span>Copyright &copy; 2015-2016 Muntasebaat Hifz. All rights reserved.</span>
   </div>
+
 </body>
 </html>
 

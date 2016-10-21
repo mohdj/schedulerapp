@@ -103,8 +103,8 @@ if($_POST)
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="email">Email address (Gmail ID if possible)</label>
-          <input type="email" class="form-control" name="email" required="true">
+          <label for="email">Email address (Gmail Only)</label>
+          <input type="email" class="form-control" name="email" required="true" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@gmail.com$">
         </div>
       </div>
     </div>
@@ -112,27 +112,27 @@ if($_POST)
     <div class="row">
       <div class="col-md-8 col-sm-12">
         <div class="form-group">
-          <label for="residence">Place of Residence</label>
+          <label for="residence">City of Residence</label>
           <input type="text" class="form-control" name="residence" required="true">
         </div>
       </div>
 
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="farigyear">Jamea Farig Year</label>
-          <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
+          <label for="farigyear">Jamea Farig Year (Hijri)</label>
+          <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year" placeholder="1430">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="hafizyear">Hafiz Year</label>
-          <input type="text" class="form-control" name="hafizyear" required="true" pattern="\d{4}" title="Please enter correct Year">
+          <label for="hafizyear">Hafiz Year (Hijri)</label>
+          <input type="text" class="form-control" name="hafizyear" required="true" pattern="\d{4}" title="Please enter correct Year" placeholder="1430">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
-          <label for="hifztime">Hifz Khidmat Time</label>
-          <input type="text" class="form-control" name="hifztime" placeholder="e.g. 18-18:30">
+          <label for="hifztime">Hifz Khidmat Time (minimum 1 hour mandatory)</label>
+          <input type="text" class="form-control" name="hifztime" placeholder="e.g. 18-19" pattern="\d\d-\d\d" required="true">
         </div>
       </div>
     </div>
