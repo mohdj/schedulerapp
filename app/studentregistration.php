@@ -26,7 +26,8 @@ if($_POST)
                                         `Skype`,
                                         `Mobile`,
                                         `Classtime`,
-                                        `Hifzdays`
+                                        `Hifzdays`,
+                                        `hifzsanad`
                                         )
                             VALUES (
                                     '$itsid',
@@ -40,7 +41,8 @@ if($_POST)
                                     '$skype',
                                     '$mobile',
                                     '$hifztime',
-                                    '$hifzdays'
+                                    '$hifzdays',
+                                    '$hifzsanad'
                                     )";
   mysqli_query($link,$sql) or die(mysqli_error($link));
   mysqli_close($link);
@@ -65,7 +67,7 @@ if($_POST)
   </head>
 <body>
 
-  <div class="header">
+  <div class="header" align="center">
     <h3><a href="/">Muntasebaat Hifz Registration</a></h3>
   </div>
 
@@ -73,31 +75,18 @@ if($_POST)
     <div class="panel panel-default"><div class="panel-heading">Account Details</div>
       <div class="panel-body">
       	<p>
-          Provide your account details. Make sure to remember or note down your password for future reference. Provide your fullname, including first last and middle name.
+          Please provide your details to create an account with Muntasebat Hifz site. Make sure to remember or note down your password for future reference.
         </p>
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
               <label>ITS ID</label>
-              <input type="number" class="form-control" name="itsid" pattern="\d{8}" required="true" title="Please enter correct ITS ID">
+              <input type="text" class="form-control" name="itsid" pattern="\d{8}" required="true" title="Please enter correct ITS ID">
             </div>
           </div>
-          <div class="col-md-8 col-sm-12">
-            <div class="form-group">
-              <label>Name</label>
-              <input type="text" class="form-control" name="fullname" required="true">
-            </div>
-          </div>
-
            <div class="col-md-4 col-sm-12">
             <div class="form-group">
               <label>Create Password</label>
-              <input type="password" class="form-control" name="password" required="true">
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="form-group">
-              <label>Confirm Password</label>
               <input type="password" class="form-control" name="password" required="true">
             </div>
           </div>
@@ -110,13 +99,19 @@ if($_POST)
     <div class="panel panel-default"><div class="panel-heading">Contact Details</div>
       <div class="panel-body">
         <p>
-          Provide your contact details. Skype and/or Gmail (hangout) will be used for conducting live session with your teacher. Your mobile No should be whatsapp no. All important communication will be sent to provided mobile no and email address.
+          Provide your Full name, including First, Last and Middle name. Skype and/or Gmail (hangout) will be used for conducting live session with your teacher. Your mobile no. should be whatsapp no. All important communication will be sent to mobile no and email address provided below.
         </p>
         <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" name="fullname" required="true">
+            </div>
+          </div>
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="email">Email address (Gmail if possible)</label>
-              <input type="email" class="form-control" name="email" required="true">
+              <label for="email">Email address (Gmail Only)</label>
+              <input type="email" class="form-control" name="email" required="true" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@gmail.com$">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
@@ -132,10 +127,10 @@ if($_POST)
             </div>
           </div>
 
-          <div class="col-md-12">
+          <div class="col-md-4">
             <div class="form-group">
-              <label for="email">Place of Residence</label>
-              <textarea type="text" class="form-control" name="residence" required="true"></textarea>
+              <label for="residence">City of Residence</label>
+              <input type="text" class="form-control" name="residence" required="true">
             </div>
           </div>
         </div>
@@ -147,25 +142,38 @@ if($_POST)
     <div class="panel panel-default"><div class="panel-heading">Misc Details</div>
       <div class="panel-body">
         <p>
-          Your Jamig Farig year in Hijri and any khidmat that you are currently performing. Also specify the Juz No uptill which you have completed hifz. 
+          Your Jamea Farig year in Hijri and any khidmat that you are currently performing. Also specify the Juz no. uptil which you have completed hifz. 
         </p>
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="email">Jamea Farig Year (Hijri)</label>
+              <label for="farigyear">Jamea Farig Year (Hijri)</label>
               <input type="text" class="form-control" name="farigyear" required="true" pattern="\d{4}" title="Please enter correct Year">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="skype">Khidmat (if any?)</label>
+              <label for="khidmat">Khidmat (if any?)</label>
               <input type="text" class="form-control" name="khidmat">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="mobile">Hifz Done Till</label>
+              <label for="hifzdonetill">Hifz Done Till</label>
               <input type="number" class="form-control" name="hifzdonetill" value="0" max="30" required="true">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-group">
+              <label for="hifzsanad">Hifz Sanad</label>
+              <select class="form-control" name="hifzsanad">
+                <option>None</option>
+                <option>Juz Amma</option>
+                <option>Sanah Ula</option>
+                <option>Sanah Saniyah</option>
+                <option>Sanah Salesah</option>
+                <option>Hifz Tamam</option>
+              </select>
             </div>
           </div>
         </div>
@@ -182,13 +190,13 @@ if($_POST)
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="itsid">Hifz Class Time</label>
+              <label for="hifztime">Hifz Class Time</label>
               <input type="text" class="form-control" name="hifztime" placeholder="e.g. 09:00-09:30,18:00-18:30">
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="form-group">
-              <label for="fullname">Hifz Days</label>
+              <label for="hifzdays">Hifz Days</label>
               <input type="text" class="form-control" name="hifzdays" placeholder="e.g. Wed,Thu">
             </div>
           </div>
