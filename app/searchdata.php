@@ -93,9 +93,9 @@ if($_GET)
       <th colspan="2">Murajeat 1</th>
       <th colspan="2">Murajeat 2</th>
       <th colspan="2">Murajeat 3</th>
-      <th colspan="3">Jadeed</th>
-      <th colspan="2">Tasmee</th>
       <th colspan="3">Juzhali</th>
+      <th colspan="2">Tasmee</th>
+      <th colspan="3">Jadeed</th>
     </tr>
     <tr>
       <th>Juz no</th>
@@ -104,13 +104,13 @@ if($_GET)
       <th>Marks</th>
       <th>Juz No</th>
       <th>Marks</th>
-      <th>Surat</th>
-      <th>Ayaat</th>
+      <th>From Page</th>
+      <th>To Page</th>
       <th>Marks</th>
       <th>Juz No</th>
       <th>Marks</th>
-      <th>From Page</th>
-      <th>To Page</th>
+      <th>Surat</th>
+      <th>Ayaat</th>
       <th>Marks</th>
     </tr>
   </thead>
@@ -127,14 +127,14 @@ if($_GET)
       <td><?php echo $values['murajeat_marks2']; ?></td>
       <td><?php echo $values['murajeat_juz3']; ?></td>
       <td><?php echo $values['murajeat_marks3']; ?></td>
-      <td><?php echo $values['jadeed_surat']; ?></td>
-      <td><?php echo $values['jadeed_to_ayat']; ?></td>
-      <td><?php echo $values['jadeed_marks']; ?></td>
-      <td><?php echo $values['tasmee']; ?></td>
-      <td><?php echo $values['tasmee_marks']; ?></td>
       <td><?php echo $values['juzhali_from']; ?></td>
       <td><?php echo $values['juzhali_to']; ?></td>
       <td><?php echo $values['juzhali_marks']; ?></td>
+      <td><?php echo $values['tasmee']; ?></td>
+      <td><?php echo $values['tasmee_marks']; ?></td>
+      <td><?php echo $values['jadeed_surat']; ?></td>
+      <td><?php echo $values['jadeed_to_ayat']; ?></td>
+      <td><?php echo $values['jadeed_marks']; ?></td>
     </tr>
     <?php } ?>
   </tbody>
