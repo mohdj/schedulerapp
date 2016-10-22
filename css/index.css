@@ -1,7 +1,6 @@
 .header {
   min-height: 50px;
   background: #FFEAC3;
-  text-transform: uppercase;
   border-bottom: 1px solid #69442A;
   margin-bottom: 20px;
   text-align: center;
@@ -11,10 +10,15 @@
   line-height: 60px;
   font-family: serif;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .header a {
   color: #444;
   cursor: pointer;
+}
+
+.header .banner {
+  border-top: 1px solid #69442A;
 }
 
 .footer {
@@ -26,4 +30,8 @@
 }
 .footer span {
   line-height: 40px;
+}
+
+.entry-box {
+  
 }
