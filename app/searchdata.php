@@ -50,11 +50,10 @@ if($_GET)
     <div class="modal-dialog">
       <div class="modal-content">
          <div class="modal-header">
-           <h4 class="modal-title">Enter hifz data</h4>
+           <h4 class="modal-title">Enter Hifz Data</h4>
          </div>
          <div class="modal-body">
            <div id="hisabform">
-
             <div class="form-group row">
               <label for="date" class="col-xs-2 col-form-label">Date</label>
               <div class="col-xs-10">
