@@ -21,6 +21,14 @@ class Examples extends CI_Controller {
 	public function students()
 	{
 		try{
+
+			session_start();
+			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
+				{
+
+				}else
+				 header("Location: http://www.muntasebaathifz.com/app/login.php");
+				 
 			$crud = new grocery_CRUD();
 
 			$crud->set_theme('datatables');
@@ -37,6 +45,14 @@ class Examples extends CI_Controller {
 	public function reports()
 	{
 		try{
+
+			session_start();
+			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
+				{
+
+				}else
+				 header("Location: http://www.muntasebaathifz.com/app/login.php");
+
 			$crud = new grocery_CRUD();
 
 			$crud->set_theme('datatables');
@@ -55,7 +71,7 @@ class Examples extends CI_Controller {
 		try{
 
 			session_start();
-			if ($_SESSION['login_teacher'] == "30376437" || $_SESSION['login_teacher'] == "30376437")
+			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
 				{
 
 				}else
