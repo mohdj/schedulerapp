@@ -113,7 +113,7 @@ if($_POST)
           <div class="col-md-4 col-sm-12">
             <div class="form-group">
               <label for="email">Email address (Gmail Only)</label>
-              <input type="email" class="form-control" name="email" required="true" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@gmail.com$">
+              <input type="email" class="form-control" name="email" required="true" pattern="^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@gmail.com$">
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
