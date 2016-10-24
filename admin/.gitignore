@@ -26,6 +26,5 @@ application/models/index.html
 application/third_party/
 application/views/index.html
 application/views/welcome_message.php
-application/views/errors/*
 license.txt
 bootstrap-v4
