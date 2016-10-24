@@ -33,6 +33,8 @@ if($_GET)
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
  
 </head>
 <body>
@@ -200,12 +202,7 @@ if (!empty($values['Fullname']))
       <th colspan="3">Juzhali</th>
       <th colspan="3">Jadeed</th>
       
-      <?php
-       if (!empty($_SESSION['login_teacher']))
-        {
-        ?>
-      <th rowspan="2">Action</th>
-      <?php } ?>
+      
     </tr>
     <tr>
       <th>Juz no</th>
@@ -249,28 +246,13 @@ if (!empty($values['Fullname']))
       <td><?php echo $values['jadeed_surat']; ?></td>
       <td><?php echo $values['jadeed_to_ayat']; ?></td>
       <td><?php echo $values['jadeed_marks']; ?></td>
-      <?php
-       if (!empty($_SESSION['login_teacher']))
-        {
-        ?>
-      <td></td>
-      <?php } ?>
-    </tr>
-    <?php
-       } 
-       if (!empty($_SESSION['login_teacher']))
-        {
-        ?>
-    <tr>
-        <td colspan='15'></td>
-        <td><a href="#" data-key="payhisab" data-teacher-its="<?php echo $_SESSION['login_teacher']; ?>" data-its="<?php echo $student_itsid; ?>"><img src="images/add.png" style="width:20px;height:20px;"></a></td>
     </tr>
     <?php } ?>
   </tbody>
 </table>
 <?php } ?>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+
+<a href="#" class="btn btn-success btn-md" data-key="payhisab" data-teacher-its="<?php echo $_SESSION['login_teacher']; ?>" data-its="<?php echo $student_itsid; ?>">Add Report</a>
 
 <script>
 $(function(){
