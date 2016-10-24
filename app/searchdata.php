@@ -366,10 +366,15 @@ if (!empty($values['Fullname']))
     <?php } ?>
   </tbody>
 </table>
-<?php } ?>
+<?php
+}
+       if (!empty($_SESSION['login_teacher']))
+        {
+      ?>
 
 <a href="#" class="btn btn-success btn-md" data-key="payhisab" data-teacher-its="<?php echo $_SESSION['login_teacher']; ?>" data-its="<?php echo $student_itsid; ?>">Add Report</a>
 
+<?php } ?>
 <script>
 $(function(){
       $(function(){
