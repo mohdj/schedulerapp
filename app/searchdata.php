@@ -123,9 +123,125 @@ if($_GET)
             <legend>Jadeed</legend>
 
             <div class="form-group row">
-              <label for="jd_surat" class="col-xs-2 col-form-label">Surat no.</label>
-              <div class="col-xs-2">
-                <input class="form-control" type="number" name="jd_surat" min="1"  max="114" placeholder="112">
+              <label for="jd_surat" class="col-xs-1 col-form-label">Surat</label>
+              <div class="col-xs-3">
+               <select class="form-control" name="jd_surat">
+                <option>1-Fatihah</option>
+                <option>2-Baqarah</option>
+                <option>3-AaleImran</option>
+                <option>4-Nisaa</option>
+                <option>5-Maaidah</option>
+                <option>6-Anaam</option>
+                <option>7-Aaraf</option>
+                <option>8-Anfaal</option>
+                <option>9-Tawbah</option>
+                <option>10-Yoonus</option>
+                <option>11-Huud</option>
+                <option>12-Yuusuf</option>
+                <option>13-Raad</option>
+                <option>14-Ibraheem</option>
+                <option>15-Hijr</option>
+                <option>16-Nahl</option>
+                <option>17-Isra</option>
+                <option>18-Kahf</option>
+                <option>19-Maryam</option>
+                <option>20-Taha</option>
+                <option>21-Anbiyaa</option>
+                <option>22-Hajj</option>
+                <option>23-Muminoon</option>
+                <option>24-Noor</option>
+                <option>25-Furqaan</option>
+                <option>26-Shoaraa</option>
+                <option>27-Naml</option>
+                <option>28-Qasas</option>
+                <option>29-Ankaboot</option>
+                <option>30-Ruum</option>
+                <option>31-Luqmaan</option>
+                <option>32-Sajdah</option>
+                <option>33-Ahzaab</option>
+                <option>34-Saba</option>
+                <option>35-Faatir</option>
+                <option>36-YaSeen</option>
+                <option>37-Saaffaat</option>
+                <option>38-Saad</option>
+                <option>39-Zumar</option>
+                <option>40-Ghafir</option>
+                <option>41-Fussilat</option>
+                <option>42-Shuraa</option>
+                <option>43-Zukhruf</option>
+                <option>44-Dukhaan</option>
+                <option>45-Jaasiyah</option>
+                <option>46-Ahqaaf</option>
+                <option>47-Mohammed</option>
+                <option>48-Fath</option>
+                <option>49-Hujuraat</option>
+                <option>50-Qaaf</option>
+                <option>51-Zaariyat</option>
+                <option>52-Toor</option>
+                <option>53-Najm</option>
+                <option>54-Qamar</option>
+                <option>55-Rahmaan</option>
+                <option>56-Waaqeah</option>
+                <option>57-Hadeed</option>
+                <option>58-Mujadilah</option>
+                <option>59-Hashr</option>
+                <option>60-Mumtahanah</option>
+                <option>61-Saff</option>
+                <option>62-Jumoah</option>
+                <option>63-Munafiqoon</option>
+                <option>64-Taghabun</option>
+                <option>65-Talaq</option>
+                <option>66-Tahreem</option>
+                <option>67-Mulk</option>
+                <option>68-Qalam</option>
+                <option>69-Haaqqah</option>
+                <option>70-Maaarij</option>
+                <option>71-Nooh</option>
+                <option>72-Jinn</option>
+                <option>73-Muzzammil</option>
+                <option>74-Muddasir</option>
+                <option>75-Qiyamah</option>
+                <option>76-Insaan</option>
+                <option>77-Mursalaat</option>
+                <option>78-Naba</option>
+                <option>79-Nazeaat</option>
+                <option>80-Abasa</option>
+                <option>81-Takweer</option>
+                <option>82-Infitaar</option>
+                <option>83-Mutaffifeen</option>
+                <option>84-Inshiqaaq</option>
+                <option>85-Burooj</option>
+                <option>86-Taariq</option>
+                <option>87-Aaala</option>
+                <option>88-Ghashiya</option>
+                <option>89-Fajr</option>
+                <option>90-Balad</option>
+                <option>91-Shams</option>
+                <option>92-Layl</option>
+                <option>93-Duhaa</option>
+                <option>94-Insheraah</option>
+                <option>95-Teen</option>
+                <option>96-Alaq</option>
+                <option>97-Qadr</option>
+                <option>98-Bayyinah</option>
+                <option>99-Zilzaal</option>
+                <option>100-Aadiyaat</option>
+                <option>101-Qaariah</option>
+                <option>102-Takaathur</option>
+                <option>103-Asr</option>
+                <option>104-Humazah</option>
+                <option>105-Feel</option>
+                <option>106-Quraish</option>
+                <option>107-Maaoon</option>
+                <option>108-Kauthar</option>
+                <option>109-Kafiroon</option>
+                <option>110-Nasr</option>
+                <option>111-Masad</option>
+                <option>112-Ikhlaas</option>
+                <option>113-Falaq</option>
+                <option>114-Naas</option>
+              </select>
+
               </div>
 
               <label for="jd_to" class="col-xs-2 col-form-label">To Ayaat</label>
