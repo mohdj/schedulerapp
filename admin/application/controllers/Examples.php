@@ -53,6 +53,14 @@ class Examples extends CI_Controller {
 	public function teachers()
 	{
 		try{
+
+			session_start();
+			if ($_SESSION['login_teacher'] == "30376437" || $_SESSION['login_teacher'] == "30376437")
+				{
+
+				}else
+				 header("Location: http://www.muntasebaathifz.com/app/login.php");
+
 			$crud = new grocery_CRUD();
 
 			$crud->set_theme('datatables');
