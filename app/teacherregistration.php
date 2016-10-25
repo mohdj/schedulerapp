@@ -92,13 +92,13 @@ if($_POST)
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="mobile">Mobile No.</label>
-          <input type="text" class="form-control" name="mobile" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{10,14}">
+          <input type="text" class="form-control" name="mobile" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{9,14}">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="form-group">
           <label for="email">Whatsapp No.</label>
-          <input type="text" class="form-control" name="whatsapp" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{10,14}">
+          <input type="text" class="form-control" name="whatsapp" required="true" placeholder="+919999999999" pattern="^\+[1-9]{1}\d{9,14}">
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
