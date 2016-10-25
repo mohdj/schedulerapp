@@ -17,7 +17,7 @@ if ($_POST) {
 
   $report_name = $_POST['reportname'];
 
-  $query = SELECT * FROM daily_hifz_report limit 5;
+  $query = "SELECT * FROM daily_hifz_report limit 5";
   $result = mysqli_query($link, $query);
 
   $all_property = array();  //declare an array for saving property
