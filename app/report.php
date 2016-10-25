@@ -19,8 +19,10 @@ if ($_POST) {
     $query = "SELECT * FROM students";
   } elseif ($reportname == 'all_teacher') {
     $query = "SELECT * FROM teachers";
-  } else ($reportname == 'test_report') {
+  } elseif ($reportname == 'test_report') {
     $query = "SELECT * FROM daily_hifz_report limit 5";
+  } else {
+    echo "invalid report name";
   }
   
   $result = mysqli_query($link, $query);
