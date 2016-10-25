@@ -15,14 +15,19 @@ if (mysqli_connect_errno()) {
 if ($_POST) {
   $report_name = $_POST['reportname'];
 
-  if ($reportname == 'all_student') {
-    $query = "SELECT * FROM students";
-  } elseif ($reportname == 'all_teacher') {
-    $query = "SELECT * FROM teachers";
-  } elseif ($reportname == 'test_report') {
-    $query = "SELECT * FROM daily_hifz_report limit 5";
-  } else {
-    echo "invalid report name";
+  switch ($reportname) {
+      case "all_student":
+          $query = "SELECT * FROM students";
+          break;
+      case "all_teacher":
+          $query = "SELECT * FROM teachers";
+          break;
+      case "test_report":
+          $query = "SELECT * FROM daily_hifz_report limit 5";
+          break;
+      default:
+          $query = "SELECT 'no reportname provided' as `Error`";
+          break;
   }
   
   $result = mysqli_query($link, $query);
