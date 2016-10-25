@@ -23,7 +23,7 @@ class Examples extends CI_Controller {
 		try{
 
 			session_start();
-			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
+			if ($_SESSION['login_teacher'] == "20359401")
 				{
 
 				}else
@@ -47,7 +47,7 @@ class Examples extends CI_Controller {
 		try{
 
 			session_start();
-			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
+			if ($_SESSION['login_teacher'] == "20359401")
 				{
 
 				}else
@@ -71,7 +71,7 @@ class Examples extends CI_Controller {
 		try{
 
 			session_start();
-			if ($_SESSION['login_user'] == "20359401" || $_SESSION['login_teacher'] == "20359401")
+			if ($_SESSION['login_teacher'] == "20359401")
 				{
 
 				}else
