@@ -305,13 +305,6 @@ if (!empty($values['Fullname']))
   <thead>
     <tr>
       <th rowspan="2">Date</th>
-      <?php
-       if (!empty($_SESSION['login_teacher']))
-        {
-      ?>
-      <th rowspan="2">Teacher ITS</th>
-      <th rowspan="2">Student ITS</th>
-      <?php } ?>
       <th colspan="2">Murajeat 1</th>
       <th colspan="2">Murajeat 2</th>
       <th colspan="2">Murajeat 3</th>
@@ -343,13 +336,6 @@ if (!empty($values['Fullname']))
     ?>
     <tr>
       <td><?php echo $values['date']; ?></td>
-      <?php
-       if (!empty($_SESSION['login_teacher']))
-        {
-        ?>
-      <td><?php echo $values['its_teacher']; ?></td>
-      <td><?php echo $values['its_student']; ?></td>
-      <?php } ?>
       <td><?php echo $values['murajeat_juz1']; ?></td>
       <td><?php echo $values['murajeat_marks1']; ?></td>
       <td><?php echo $values['murajeat_juz2']; ?></td>
