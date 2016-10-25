@@ -17,10 +17,10 @@ if ($_POST) {
 
   switch ($report_name) {
       case "all_student":
-          $query = "SELECT `ITS`, `Fullname`, `Farigyear`, `HifzSipara`, `hifzsanad`, `Residence`, `Khidmat`, `Email`, `Skype`, `Mobile`, `Classtime`, `Hifzdays` FROM `students`;";
+          $query = "SELECT `ITS`, `Fullname`, `Farigyear`, `HifzSipara`, `hifzsanad`, `Residence`, `Khidmat`, `Email`, `Skype`, `Mobile`, `Classtime`, `Hifzdays` FROM `students` ORDER BY  `students`.`id` ASC;";
           break;
       case "all_teacher":
-          $query = "SELECT `ITS`, `Full_Name`, `Time`, `Residence`, `Hifzyear`, `Farigyear`, `Mobile`, `Whatsapp`, `Email` FROM `teachers`;";
+          $query = "SELECT `ITS`, `Full_Name`, `Time`, `Residence`, `Hifzyear`, `Farigyear`, `Mobile`, `Whatsapp`, `Email` FROM `teachers` ORDER BY  `teachers`.`id` ASC;";
           break;
       case "today_hifz_report":
           $query = "SELECT  `students`.`fullname` as `Student_Name`,  `teachers`.`full_name` as `Teacher_Name` , `daily_hifz_report`.`date`, `daily_hifz_report`.`attendance`, `daily_hifz_report`.`murajeat_juz1`, `daily_hifz_report`.`murajeat_marks1`, `daily_hifz_report`.`murajeat_juz2`, `daily_hifz_report`.`murajeat_marks2`, `daily_hifz_report`.`murajeat_juz3`, `daily_hifz_report`.`murajeat_marks3`, `daily_hifz_report`.`jadeed_surat`, `daily_hifz_report`.`jadeed_to_ayat`, `daily_hifz_report`.`jadeed_marks`, `daily_hifz_report`.`juzhali_from`, `daily_hifz_report`.`juzhali_to`, `daily_hifz_report`.`juzhali_marks`, `daily_hifz_report`.`tasmee`, `daily_hifz_report`.`tasmee_marks` FROM  `daily_hifz_report` JOIN  `students` ON  `daily_hifz_report`.`its_student` =  `students`.`its` JOIN  `teachers` ON  `daily_hifz_report`.`its_teacher` =  `teachers`.`its` WHERE  `daily_hifz_report`.`date` = DATE(NOW());";
@@ -71,9 +71,11 @@ if ($_POST) {
           <form class="form-horizontal" method="post">
             <div class="col-md-8 form-group">
               <select class="form-control" name="reportname">
-                <option value="test_report">Test Report</option>
-                <option value="all_student">All Student Data</option>
-                <option value="all_teacher">All Teacher Data</option>
+               <option value="test_report">Test Report</option>
+               <option value="all_student">All Student Data</option>
+               <option value="all_teacher">All Teacher Data</option>
+               <option value="today_hifz_report">Today Hifz Report</option>
+               <option value="yesterday_hifz_report">Yesterday Hifz Report</option>
               </select>
             </div>
             <div class="col-md-2 col-md-offset-2">
