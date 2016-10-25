@@ -17,9 +17,9 @@ if ($_POST) {
 
   if ($reportname == 'all_student') {
     $query = "SELECT * FROM students";
-  } else if ($reportname == 'all_teacher') {
+  } elseif ($reportname == 'all_teacher') {
     $query = "SELECT * FROM teachers";
-  } else if ($reportname == 'test_report') {
+  } else ($reportname == 'test_report') {
     $query = "SELECT * FROM daily_hifz_report limit 5";
   }
   
